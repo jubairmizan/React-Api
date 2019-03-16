@@ -7,17 +7,17 @@ class Index extends React.Component{
 		super(props);
 
 		axios.get('http://gonona-lab.com/api/api/topCardNews')
-		  .then(function (response) {
-		    // handle success
-		    console.log(response);
-		  })
-		  .catch(function (error) {
-		    // handle error
-		    console.log(error);
-		  })
-		  .then(function () {
-		    // always executed
-		  });
+		.then(function (response) {
+			// handle success
+			console.log(response);
+		})
+		.catch(function (error) {
+			// handle error
+			console.log(error);
+		})
+		.then(function () {
+			// always executed
+		});
 
 
 	}
