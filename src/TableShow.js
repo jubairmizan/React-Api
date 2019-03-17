@@ -1,15 +1,30 @@
 import React from 'react';
 
 const TableShow = (props) => {
+	
+	function timeConverter(UNIX_timestamp){
+	  var a = new Date(UNIX_timestamp * 1000);
+	  var months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+	  var year = a.getFullYear();
+	  var month = months[a.getMonth()];
+	  var date = a.getDate();
+	  var hour = a.getHours();
+	  var min = a.getMinutes();
+	  var sec = a.getSeconds();
+	  var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+	  // return time;
+	  return UNIX_timestamp;
+	}
+
 	const rowsData = props.tableData.map((rowData,index)=>{
 		return <tr key={index}>
 					<td>{index+1}</td>
 					<td>{rowData.title}</td>
-					<td>{rowData.url}</td>
+					<td><a href={rowData.url} target="_blank">{rowData.url}</a></td>
 					<td>{rowData.author}</td>
 					<td>{rowData.points}</td>
 					<td>{rowData.num_comments}</td>
-					<td>{rowData.created_at}</td>
+					<td>{ timeConverter(rowData.created_at) }</td>
 				</tr>;
 	});
 
