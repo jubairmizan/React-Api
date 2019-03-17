@@ -2,7 +2,15 @@ import React from 'react';
 
 const TableShow = (props) => {
 	const rowsData = props.tableData.map((rowData,index)=>{
-		return <tr key={index}><td>{index+1}</td><td>{rowData.title}</td><td>{rowData.url}</td><td>{rowData.author}</td><td>{rowData.points}</td><td>{rowData.num_comments}</td><td>{rowData.created_at}</td></tr>;
+		return <tr key={index}>
+					<td>{index+1}</td>
+					<td>{rowData.title}</td>
+					<td>{rowData.url}</td>
+					<td>{rowData.author}</td>
+					<td>{rowData.points}</td>
+					<td>{rowData.num_comments}</td>
+					<td>{rowData.created_at}</td>
+				</tr>;
 	});
 
 	return (
