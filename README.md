@@ -1,3 +1,12 @@
+## Clone the projects.
+
+After clone go to the repository by command 
+## cd React-Api
+
+After That install npm by command 
+## npm install
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
